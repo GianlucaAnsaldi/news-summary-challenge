@@ -9,7 +9,15 @@ const expect = (actualValue) => {
       let result = actualValue === expectedValue;
       let log = result
         ? `Pass: ${actualValue} is equal to ${expectedValue}`
-        : `Fail: ${actualValue} is note equal to ${expectedValue}`;
+        : `Fail: ${actualValue} is not equal to ${expectedValue}`;
+      this.printResponse(log, result);
+    },
+
+    toBeInstanceOf(expectedValue) {
+      let result = actualValue instanceof expectedValue;
+      let log = result
+        ? `Pass: ${actualValue.constructor.name} is an instance of ${expectedValue.name}`
+        : `Fail: ${actualValue.constructor.name} is not an instance of ${expectedValue.name}`;
       this.printResponse(log, result);
     },
   };
