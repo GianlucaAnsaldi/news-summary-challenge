@@ -8,3 +8,8 @@ it('adds a new article in the headlines', () => {
   headlines.addArticle();
   expect(headlines.articles.length).toEqual(1);
 });
+
+it('returns all the articles', () => {
+  headlines.addArticle();
+  expect(headlines.showAll().length).toEqual(2);
+});

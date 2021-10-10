@@ -6,4 +6,8 @@ class Headlines {
   addArticle(article) {
     this.articles.push(article);
   }
+
+  showAll() {
+    return this.articles;
+  }
 }
