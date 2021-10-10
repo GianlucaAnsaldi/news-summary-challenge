@@ -1,4 +1,10 @@
+const headlines = new Headlines();
+
 it('a new instance of Headlines is an empty array', () => {
-  let headlines = new Headlines();
   expect(headlines.articles.length).toEqual(0);
+});
+
+it('adds a new article in the headlines', () => {
+  headlines.addArticle();
+  expect(headlines.articles.length).toEqual(1);
 });
